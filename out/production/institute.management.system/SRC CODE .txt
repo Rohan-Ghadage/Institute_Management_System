@@ -1,0 +1,3489 @@
+Login Frame 
+
+
+package institute.management.system;
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+
+public class newlogin extends javax.swing.JFrame implements ActionListener {
+
+
+    public newlogin() {
+        initComponents();
+    }
+
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+    private void initComponents() {
+
+        jPanel2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        setUndecorated(true);
+
+        jPanel2.setBackground(new java.awt.Color(74, 25, 67));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\univer.png")); // NOI18N
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("WELCOME TO LOGIN");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("INSTITUTE MANAGEMENT SYSTEM");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(124, 124, 124)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jLabel4))
+                                        .addComponent(jLabel6))
+                                .addContainerGap(143, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(76, 76, 76)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(98, Short.MAX_VALUE))
+        );
+
+        jPanel3.setBackground(new java.awt.Color(225, 195, 220));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\username.png")); // NOI18N
+        jLabel1.setText("USERNAME");
+
+        jTextField1.setBackground(new java.awt.Color(225, 195, 220));
+        jTextField1.setFont(new Font("Arial Black",Font.PLAIN,14));
+        jTextField1.setBorder(null);
+
+        jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\password.png")); // NOI18N
+        jLabel2.setText("PASSWORD");
+
+        jPasswordField1.setBackground(new java.awt.Color(225, 195, 220));
+        jPasswordField1.setBorder(null);
+        jPasswordField1.setFont(new Font("Arial Black",Font.PLAIN,14));
+
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+
+        jButton1.setBackground(new java.awt.Color(225, 195, 220));
+        jButton1.setText("SIGN IN");
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton1.addActionListener(this);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel3.setText("X");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(89, 89, 89)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
+                                        .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextField1)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jSeparator2)
+                                        .addComponent(jSeparator1))
+                                .addContainerGap(63, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3)
+                                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(110, 110, 110)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
+        setLocationRelativeTo(null);
+    }// </editor-fold>
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {
+        // TODO add your handling code here:
+        System.exit(0);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        if(ae.getSource()== jButton1){
+            String username = jTextField1.getText();
+            String password = jPasswordField1.getText();
+            String query = "select * from login where username='"+username+"' and password ='"+password+"'";
+            try{
+                Conn c = new Conn();
+                ResultSet resultSet = c.statement.executeQuery(query);
+                if(resultSet.next()){
+                    setVisible(true);
+                    new MainDashboard().setVisible(true);
+                }else{
+                    JOptionPane.showMessageDialog(null,"Invalid username or password");
+
+                }
+
+
+            }catch(Exception E){
+
+            }
+        }else{
+            setVisible(false);
+        }
+    }
+
+    public static void main(String args[]) {
+
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(newlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(newlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(newlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(newlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new newlogin().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField jTextField1;
+    // End of variables declaration
+}
+---------------------------------------------------------------------------------------------------------
+
+MAIN DASHBOARD
+
+
+package institute.management.system;
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MainDashboard extends javax.swing.JFrame implements ActionListener {
+
+
+    public MainDashboard() {
+        initComponents();
+    }
+
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
+
+        jPanel2.setBackground(new java.awt.Color(224, 195, 220));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\Student.png")); // NOI18N
+        jLabel3.setText("STUDENT");
+
+        jButton1.setBackground(new java.awt.Color(224, 195, 220));
+        jButton1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(74, 25, 67));
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\add 24.png")); // NOI18N
+        jButton1.setText("ADD");
+        //jButton1.setBorder(null);
+        jButton1.addActionListener(this);
+
+
+        jButton2.setBackground(new java.awt.Color(224, 195, 220));
+        jButton2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(74, 25, 67));
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\view.png")); // NOI18N
+        jButton2.setText("VIEW");
+        jButton2.addActionListener(this);
+        //jButton2.setBorder(null);
+
+        jButton3.setBackground(new java.awt.Color(224, 195, 220));
+        jButton3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(74, 25, 67));
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\update Student.png")); // NOI18N
+        jButton3.setText("UPDATE");
+        jButton3.addActionListener(this);
+        //jButton3.setBorder(null);
+
+        jButton4.setBackground(new java.awt.Color(224, 195, 220));
+        jButton4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(74, 25, 67));
+        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\leave.png")); // NOI18N
+        jButton4.setText("LEAVE");
+        jButton4.addActionListener(this);
+       // jButton4.setBorder(null);
+
+        jButton5.setBackground(new java.awt.Color(224, 195, 220));
+        jButton5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(74, 25, 67));
+        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\leave details.png")); // NOI18N
+        jButton5.setText("LEAVE DETAIL");
+        jButton5.addActionListener(this);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\Teacher.png")); // NOI18N
+        jLabel4.setText("TEACHER");
+
+
+        jButton6.setBackground(new java.awt.Color(224, 195, 220));
+        jButton6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(74, 25, 67));
+        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\add 24.png")); // NOI18N
+        jButton6.setText("ADD");
+        //jButton6.setBorder(null);
+        jButton6.addActionListener(this);
+
+
+
+
+        jButton7.setBackground(new java.awt.Color(224, 195, 220));
+        jButton7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(74, 25, 67));
+        jButton7.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\view.png")); // NOI18N
+        jButton7.setText("VIEW");
+        //jButton7.setBorder(null);
+        jButton7.addActionListener(this);
+
+        jButton8.setBackground(new java.awt.Color(224, 195, 220));
+        jButton8.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(74, 25, 67));
+        jButton8.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\update student.png")); // NOI18N
+        jButton8.setText("UPDATE");
+        //jButton8.setBorder(null);
+
+        jButton9.setBackground(new java.awt.Color(224, 195, 220));
+        jButton9.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(74, 25, 67));
+        jButton9.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\leave.png")); // NOI18N
+        jButton9.setText("LEAVE");
+        jButton9.addActionListener(this);
+        //jButton9.setBorder(null);
+
+        jButton10.setBackground(new java.awt.Color(224, 195, 220));
+        jButton10.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(74, 25, 67));
+        jButton10.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\leave details.png")); // NOI18N
+        jButton10.setText("LEAVE DETAIL");
+        //jButton10.setBorder(null);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\Examination.png")); // NOI18N
+        jLabel5.setText("EXAMINATION");
+
+        jButton11.setBackground(new java.awt.Color(224, 195, 220));
+        jButton11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(74, 25, 67));
+        jButton11.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\Enter marks.png")); // NOI18N
+        jButton11.setText("ENTER MARKS");
+        jButton11.addActionListener(this);
+        //jButton11.setBorder(null);
+
+        jButton12.setBackground(new java.awt.Color(224, 195, 220));
+        jButton12.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton12.setForeground(new java.awt.Color(74, 25, 67));
+        jButton12.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\leave details.png")); // NOI18N
+        jButton12.setText("DETAILS");
+        //jButton12.setBorder(null);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\Fees.png")); // NOI18N
+        jLabel6.setText("FEES");
+
+        jButton13.setBackground(new java.awt.Color(224, 195, 220));
+        jButton13.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(74, 25, 67));
+        jButton13.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\strucutre.png")); // NOI18N
+        jButton13.setText("STRUCTURE");
+        jButton13.addActionListener(this);
+        //jButton13.setBorder(null);
+
+        jButton14.setBackground(new java.awt.Color(224, 195, 220));
+        jButton14.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton14.setForeground(new java.awt.Color(74, 25, 67));
+        jButton14.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\Forms.png")); // NOI18N
+        jButton14.setText("FORM");
+        jButton14.addActionListener(this);
+       // jButton14.setBorder(null);
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\Utility.png")); // NOI18N
+        jLabel7.setText("UTILITY");
+
+        jButton15.setBackground(new java.awt.Color(224, 195, 220));
+        jButton15.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton15.setForeground(new java.awt.Color(74, 25, 67));
+        jButton15.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\calci.png")); // NOI18N
+        jButton15.setText("CALCULATOR");
+        jButton15.addActionListener(this);
+        //jButton15.setBorder(null);
+
+        jButton16.setBackground(new java.awt.Color(224, 195, 220));
+        jButton16.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jButton16.setForeground(new java.awt.Color(74, 25, 67));
+        jButton16.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\notepad.png")); // NOI18N
+        jButton16.setText("NOTEPAD");
+        jButton16.addActionListener(this);
+        //jButton16.setBorder(null);
+
+
+        ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("icon/clg.jpg"));
+        Image i5 = i4.getImage().getScaledInstance(1150,925,Image.SCALE_DEFAULT);
+        ImageIcon i6 = new ImageIcon(i5);
+        JLabel image = new JLabel(i6);
+        image.setBounds(100,0,1630,1001);
+        add(image);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel3.setBackground(new java.awt.Color(74, 25, 67));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel1.setText("DASHBOARD");
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\OneDrive\\Desktop\\MPL PROJECT\\PROJECT\\INSTITUTE MANAGEMENT SYSTEM\\src\\icon\\dashboard.png"));
+        jLabel1.setForeground(Color.white);
+
+        jPanel4.setBackground(new java.awt.Color(255, 0, 0));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("X");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel8)
+                                .addContainerGap(17, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel3Layout.setVerticalGroup(
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel5.setLayout(null);
+
+
+
+        //jLabel9.setIcon(new javax.swing.ImageIcon("icon/clg.jpg")); // NOI18N
+
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, 0)
+                                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 1200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, 0)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+      //  pack();
+        setExtendedState(MAXIMIZED_BOTH);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }// </editor-fold>
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {
+        System.exit(0);
+    }
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MainDashboard().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()== jButton6) {
+            new AddStudent();
+        }
+        if (e.getSource()==jButton7){
+            new TeacherDetails();
+        }
+        if (e.getSource()==jButton1){
+            new AddTeacher();
+        }
+        if(e.getSource()==jButton2){
+            new StudentDetails();
+        }
+        if (e.getSource()==jButton11){
+            new EnterMarks();
+        }
+        if (e.getSource()==jButton13){
+            new FeeStructure();
+        }
+        if (e.getSource()==jButton4){
+            new StudentLeave();
+        }
+        if (e.getSource()==jButton5){
+            new StudentLeaveDetails();
+        }
+        if (e.getSource()==jButton14){
+            new FeeForm();
+        }if (e.getSource()==jButton3){
+            new UpdateStu();
+        }if (e.getSource()==jButton8){
+            new UpdateTeacher();
+        }if (e.getSource()==jButton9){
+            new TeacherLeave();
+        }
+        if (e.getSource()==jButton15){
+            try{
+                Runtime.getRuntime().exec("calc.exe"); //to add calci
+            }catch (Exception E){
+                E.printStackTrace();
+            }
+
+        }
+        if (e.getSource()==jButton16) {
+            try {
+                Runtime.getRuntime().exec("notepad.exe"); // to add notepad
+            } catch (Exception AE) {
+                AE.printStackTrace();
+            }
+
+
+        }
+
+    }
+
+    private abstract class AbsoluteLayout implements LayoutManager {
+    }
+    // End of variables declaration
+}
+
+//  ----------------------------------------------------------------------------------------
+ADD STUDENT 
+
+package institute.management.system;
+
+import com.toedter.calendar.JDateChooser;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+
+public class AddStudent extends JFrame implements ActionListener {
+
+    JTextField tfname, tffname,tfaddress,tfphone,tfemail,tfx,tfxii,tfaadhar;
+    JLabel labelrollno;
+   JDateChooser dcdob;
+    JComboBox cbcourse,cbbranch;
+    JButton submit, cancel;
+    Character character;
+
+
+    Random ran= new Random();
+    long first4= Math.abs((ran.nextLong() % 9000L)+ 1000L);
+
+    AddStudent(){
+        setSize(900,700);
+        setLocation (350, 50);
+        //setBackground(new Color(74, 25, 67));
+        setLayout(null);
+        getContentPane().setBackground(new Color(74,25,67));
+       // setDefaultCloseOperation(EXIT_ON_CLOSE);
+       // setBackground(new Color(74, 25, 67));
+        //setIconImage();
+
+        JLabel heading = new JLabel("New Student Details");
+        heading.setForeground(new Color(224, 195, 220));
+        heading.setBounds(310, 30, 500, 50);
+        heading.setFont(new Font("ARIAL BLACK", Font.BOLD, 20));
+        add(heading);
+
+        JLabel lblname = new JLabel("Name");
+        lblname.setForeground(new Color(224, 195, 220));
+        lblname.setBounds(50, 150, 100, 30);
+        lblname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblname);
+
+        tfname= new JTextField();
+        tfname.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfname.setBounds(200, 150, 150, 30);
+                //VALIDATION
+        tfname.setInputVerifier(new InputVerifier() {
+                                       @Override
+                                       public boolean verify(JComponent input) {
+                                           JTextField textField = (JTextField) input;
+                                           String text = textField.getText().trim();
+                                           return text.matches("^[A-Za-z]+$"); // Allows only alphabetic characters
+                                       }
+                                   });
+        add(tfname);
+
+        JLabel lblfname = new JLabel(" Surname");
+        lblfname.setForeground(new Color(224, 195, 220));
+        lblfname.setBounds(400, 150, 200, 30);
+        lblfname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfname);
+
+        tffname= new JTextField();
+        tffname.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tffname.setBounds(600, 150, 150, 30);
+
+                //VALIDATION
+        tffname.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("^[A-Za-z]+$"); // Allows only alphabetic characters
+            }
+        });
+        add(tffname);
+
+        JLabel lblrollno = new JLabel("Roll Number");
+        lblrollno.setForeground(new Color(224, 195, 220));
+        lblrollno.setBounds(50, 200, 200, 30);
+        lblrollno.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblrollno);
+
+        labelrollno = new JLabel("1"+first4);
+        labelrollno.setForeground(new Color(224, 195, 220));
+        labelrollno.setBounds(200, 200, 200, 30);
+        labelrollno.setFont(new Font("serif", Font.BOLD, 20));
+        add(labelrollno);
+
+        JLabel lbldob = new JLabel("Date of Birth");
+        lbldob.setForeground(new Color(224, 195, 220));
+        lbldob.setBounds(400, 200, 200, 30);
+        lbldob.setFont(new Font("serif", Font.BOLD, 20));
+        add(lbldob);
+
+        dcdob= new JDateChooser();
+        dcdob.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        dcdob.setBounds(600,200,150,30);
+        add(dcdob);
+
+        JLabel lblfaddress = new JLabel("Address");
+        lblfaddress.setForeground(new Color(224, 195, 220));
+        lblfaddress.setBounds(50, 250, 200, 30);
+        lblfaddress.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfaddress);
+
+        tfaddress= new JTextField();
+        tfaddress.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfaddress.setBounds(200, 250, 150, 30);
+        add(tfaddress);
+
+        JLabel lblphone = new JLabel("Phone Number");
+        lblphone.setForeground(new Color(224, 195, 220));
+        lblphone.setBounds(400, 250, 200, 30);
+        lblphone.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblphone);
+
+        tfphone= new JTextField(10);
+        tfphone.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfphone.setBounds(600, 250, 150, 30);
+        tfphone.setText("0");
+        tfphone.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{10}");
+            }
+        });
+        add(tfphone);
+
+
+
+        JLabel lblfemail = new JLabel("Email ID");
+        lblfemail.setForeground(new Color(224, 195, 220));
+        lblfemail.setBounds(50, 300, 200, 30);
+        lblfemail.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfemail);
+
+        tfemail= new JTextField();
+        tfemail.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfemail.setBounds(200, 300, 150, 30);
+        add(tfemail);
+
+        JLabel lblx = new JLabel("Class X (%)");
+        lblx.setForeground(new Color(224, 195, 220));
+        lblx.setBounds(400, 300, 200, 30);
+        lblx.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblx);
+
+        tfx= new JTextField();
+        tfx.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfx.setBounds(600, 300, 150, 30);
+        tfx.setFont(new Font("Sitka Subheading Semibold",Font.PLAIN,15));
+        tfx.setText("0");
+        tfx.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{2}");
+            }
+        });
+        add(tfx);
+
+        JLabel lblxii = new JLabel("Class XII (%)");
+        lblxii.setForeground(new Color(224, 195, 220));
+        lblxii.setBounds(50, 350, 200, 30);
+        lblxii.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblxii);
+
+        tfxii= new JTextField();
+        tfxii.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfxii.setBounds(200, 350, 150, 30);
+        tfxii.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{2}");
+            }
+        });
+        add(tfxii);
+
+        JLabel lblaadhar = new JLabel("Aadhar Number");
+        lblaadhar.setForeground(new Color(224, 195, 220));
+        lblaadhar.setBounds(400, 350, 200, 30);
+        lblaadhar.setFont(new Font("serif", Font.BOLD, 20));
+
+        add(lblaadhar);
+
+        tfaadhar= new JTextField(12);
+        tfaadhar.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfaadhar.setBounds(600, 350, 150, 30);
+        tfaadhar.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{12}");
+            }
+        });
+        add(tfaadhar);
+
+        JLabel lblcourse = new JLabel("Course");
+        lblcourse.setForeground(new Color(224, 195, 220));
+        lblcourse.setBounds(50, 400, 200, 30);
+        lblcourse.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblcourse);
+
+        String course[]= {"BTech", "BBA", "BCA", "Bsc", "Msc", "MBA", "MCA", "Mcom", "MA", "BA"};
+        cbcourse= new JComboBox(course);
+        cbcourse.setBounds(200,400,150,30);
+        cbcourse.setBackground(Color.WHITE);
+        add(cbcourse);
+
+        JLabel lblbranch = new JLabel("Branch");
+        lblbranch.setForeground(new Color(224, 195, 220));
+        lblbranch.setBounds(400, 400, 200, 30);
+        lblbranch.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblbranch);
+
+        String branch[]= {"CMPN", "INFT", "EXTC", "ECS", "ELEC"};
+        //cbbranch.setForeground(new Color(224, 195, 220));
+        cbbranch= new JComboBox(branch);
+        cbbranch.setBounds(600,400,150,30);
+        cbbranch.setBackground(Color.WHITE);
+        add(cbbranch);
+
+        submit=new JButton("Submit");
+        submit.setBounds(250,550,120,30);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel=new JButton("Cancel");
+        cancel.setBounds(450,550,120,30);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
+
+        /*ImageIcon i44 = new ImageIcon(ClassLoader.getSystemResource("icon/watermark.png"));
+        Image i54 = i44.getImage().getScaledInstance(1650,1000,Image.SCALE_DEFAULT);
+        ImageIcon i64 = new ImageIcon(i54);
+        JLabel image = new JLabel(i64);
+        image.setBounds(0,0,900,700);
+        add(image);*/
+
+        //setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
+        setEnabled(true);
+        setTitle("Add Student Details");
+    }
+
+
+
+
+
+    public void actionPerformed(ActionEvent ae){
+        if (tfname.getInputVerifier().shouldYieldFocus(tfname)) {
+            JOptionPane.showMessageDialog(null, "Valid name and Surname");
+
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Invalid name and Surname. Please enter only alphabetic characters.");
+
+        }
+        if (tffname.getInputVerifier().shouldYieldFocus(tffname)){
+          //  JOptionPane.showMessageDialog(null, "Valid Surname: " + tffname.getText());
+        }else{
+            JOptionPane.showMessageDialog(null,"Invalid Surname. Please enter only alphabetic characters.");
+        }
+        if (tfphone.getInputVerifier().shouldYieldFocus(tfphone)) {
+            // JOptionPane.showMessageDialog(null, "Valid phone number: " + tfphone.getText());
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid phone number. Please enter exactly 10 digits.");
+        }
+        if (tfaadhar.getInputVerifier().shouldYieldFocus(tfaadhar)) {
+            // JOptionPane.showMessageDialog(null, "Valid phone number: " + tfphone.getText());
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid aadhar number. Please enter exactly 12 digits.");
+        }
+          if (tfx.getInputVerifier().shouldYieldFocus(tfx)){
+
+          }else{
+              JOptionPane.showMessageDialog(null,"Invalid X Marks,Only Number");
+          }
+          if(tfxii.getInputVerifier().shouldYieldFocus(tfxii)){
+
+          }else{
+              JOptionPane.showMessageDialog(null,"Invalid XII Marks,Only Number");
+          }
+        // CANCEL BUTTON WORKING
+//          if (ae.getSource()==cancel){
+//              System.exit(Integer.parseInt("0"));
+//          }
+        if (ae.getSource()==submit){
+
+            String name=tfname.getText();
+            String fname=tffname.getText();
+            String rollno=labelrollno.getText();
+            String dob=((JTextField) dcdob.getDateEditor().getUiComponent()).getText();
+            String address=tfaddress.getText();
+            String phone=tfphone.getText();
+            String email=tfemail.getText();
+            String x=tfx.getText();
+            String xii=tfxii.getText();
+            String aadhar=tfaadhar.getText();
+            String course=(String)cbcourse.getSelectedItem();
+            String branch=(String)cbbranch.getSelectedItem();
+            try{
+                String query= "insert into student values('"+name+"','"+fname+"','"+rollno+"','"+dob+"','"+address+"','"+phone+"','"+email+"','"+x+"','"+xii+"','"+aadhar+"','"+course+"','"+branch+"')";
+                Conn con =new Conn();
+                con.statement.executeUpdate(query);
+              //  PreparedStatement pstmt = con.prepareStatement(query);
+                JOptionPane.showMessageDialog(null, "Student Details Inserted Successfully!");
+                setVisible(false);
+            }catch (Exception e){
+                e.printStackTrace();
+                System.out.println(e);
+            }
+        }
+        else {setVisible(true);}
+    }
+
+
+
+    public static void main(String [] args) {
+        new AddStudent();
+    }
+}
+
+// -------------------------------------------------------------------------
+
+// VALIDATION TUNE TRAIN MAI KIYA THA 
+// validation
+
+package institute.management.system;
+
+import com.toedter.calendar.JDateChooser;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+
+public class validation extends JFrame implements ActionListener {
+
+    JTextField tfname, tffname,tfaddress,tfphone,tfemail,tfx,tfxii,tfaadhar;
+    JLabel labelrollno;
+    JDateChooser dcdob;
+    JComboBox cbcourse,cbbranch;
+    JButton submit, cancel;
+    Character character;
+
+
+    Random ran= new Random();
+    long first4= Math.abs((ran.nextLong() % 9000L)+ 1000L);
+
+    validation(){
+        setSize(900,700);
+        setLocation (350, 50);
+        //setBackground(new Color(74, 25, 67));
+        setLayout(null);
+        getContentPane().setBackground(new Color(74,25,67));
+        // setDefaultCloseOperation(EXIT_ON_CLOSE);
+        // setBackground(new Color(74, 25, 67));
+        //setIconImage();
+
+        JLabel heading = new JLabel("New Student Details");
+        heading.setForeground(new Color(224, 195, 220));
+        heading.setBounds(310, 30, 500, 50);
+        heading.setFont(new Font("ARIAL BLACK", Font.BOLD, 20));
+        add(heading);
+
+        JLabel lblname = new JLabel("Name");
+        lblname.setForeground(new Color(224, 195, 220));
+        lblname.setBounds(50, 150, 100, 30);
+        lblname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblname);
+
+        tfname= new JTextField();
+        tfname.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfname.setBounds(200, 150, 150, 30);
+        //VALIDATION
+        tfname.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("^[A-Za-z]+$"); // Allows only alphabetic characters
+            }
+        });
+        add(tfname);
+
+        JLabel lblfname = new JLabel(" Surname");
+        lblfname.setForeground(new Color(224, 195, 220));
+        lblfname.setBounds(400, 150, 200, 30);
+        lblfname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfname);
+
+        tffname= new JTextField();
+        tffname.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tffname.setBounds(600, 150, 150, 30);
+
+        //VALIDATION
+        tffname.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("^[A-Za-z]+$"); // Allows only alphabetic characters
+            }
+        });
+        add(tffname);
+
+        JLabel lblrollno = new JLabel("Roll Number");
+        lblrollno.setForeground(new Color(224, 195, 220));
+        lblrollno.setBounds(50, 200, 200, 30);
+        lblrollno.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblrollno);
+
+        labelrollno = new JLabel("1"+first4);
+        labelrollno.setForeground(new Color(224, 195, 220));
+        labelrollno.setBounds(200, 200, 200, 30);
+        labelrollno.setFont(new Font("serif", Font.BOLD, 20));
+        add(labelrollno);
+
+        JLabel lbldob = new JLabel("Date of Birth");
+        lbldob.setForeground(new Color(224, 195, 220));
+        lbldob.setBounds(400, 200, 200, 30);
+        lbldob.setFont(new Font("serif", Font.BOLD, 20));
+        add(lbldob);
+
+        dcdob= new JDateChooser();
+        dcdob.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        dcdob.setBounds(600,200,150,30);
+        add(dcdob);
+
+        JLabel lblfaddress = new JLabel("Address");
+        lblfaddress.setForeground(new Color(224, 195, 220));
+        lblfaddress.setBounds(50, 250, 200, 30);
+        lblfaddress.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfaddress);
+
+        tfaddress= new JTextField();
+        tfaddress.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfaddress.setBounds(200, 250, 150, 30);
+        add(tfaddress);
+
+        JLabel lblphone = new JLabel("Phone Number");
+        lblphone.setForeground(new Color(224, 195, 220));
+        lblphone.setBounds(400, 250, 200, 30);
+        lblphone.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblphone);
+
+        tfphone= new JTextField(10);
+        tfphone.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfphone.setBounds(600, 250, 150, 30);
+        tfphone.setText("0");
+        tfphone.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{10}");
+            }
+        });
+        add(tfphone);
+
+
+
+        JLabel lblfemail = new JLabel("Email ID");
+        lblfemail.setForeground(new Color(224, 195, 220));
+        lblfemail.setBounds(50, 300, 200, 30);
+        lblfemail.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfemail);
+
+        tfemail= new JTextField();
+        tfemail.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfemail.setBounds(200, 300, 150, 30);
+        add(tfemail);
+
+        JLabel lblx = new JLabel("Class X (%)");
+        lblx.setForeground(new Color(224, 195, 220));
+        lblx.setBounds(400, 300, 200, 30);
+        lblx.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblx);
+
+        tfx= new JTextField();
+        tfx.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfx.setBounds(600, 300, 150, 30);
+        tfx.setFont(new Font("Sitka Subheading Semibold",Font.PLAIN,15));
+        tfx.setText("0");
+        tfx.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{2}");
+            }
+        });
+        add(tfx);
+
+        JLabel lblxii = new JLabel("Class XII (%)");
+        lblxii.setForeground(new Color(224, 195, 220));
+        lblxii.setBounds(50, 350, 200, 30);
+        lblxii.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblxii);
+
+        tfxii= new JTextField();
+        tfxii.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfxii.setBounds(200, 350, 150, 30);
+        tfxii.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{2}");
+            }
+        });
+        add(tfxii);
+
+        JLabel lblaadhar = new JLabel("Aadhar Number");
+        lblaadhar.setForeground(new Color(224, 195, 220));
+        lblaadhar.setBounds(400, 350, 200, 30);
+        lblaadhar.setFont(new Font("serif", Font.BOLD, 20));
+
+        add(lblaadhar);
+
+        tfaadhar= new JTextField(12);
+        tfaadhar.setFont(new Font("ARIAL BLACK", Font.PLAIN,12));
+        tfaadhar.setBounds(600, 350, 150, 30);
+        tfaadhar.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{12}");
+            }
+        });
+        add(tfaadhar);
+
+        JLabel lblcourse = new JLabel("Course");
+        lblcourse.setForeground(new Color(224, 195, 220));
+        lblcourse.setBounds(50, 400, 200, 30);
+        lblcourse.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblcourse);
+
+        String course[]= {"BTech", "BBA", "BCA", "Bsc", "Msc", "MBA", "MCA", "Mcom", "MA", "BA"};
+        cbcourse= new JComboBox(course);
+        cbcourse.setBounds(200,400,150,30);
+        cbcourse.setBackground(Color.WHITE);
+        add(cbcourse);
+
+        JLabel lblbranch = new JLabel("Branch");
+        lblbranch.setForeground(new Color(224, 195, 220));
+        lblbranch.setBounds(400, 400, 200, 30);
+        lblbranch.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblbranch);
+
+        String branch[]= {"CMPN", "INFT", "EXTC", "ECS", "ELEC"};
+        //cbbranch.setForeground(new Color(224, 195, 220));
+        cbbranch= new JComboBox(branch);
+        cbbranch.setBounds(600,400,150,30);
+        cbbranch.setBackground(Color.WHITE);
+        add(cbbranch);
+
+        submit=new JButton("Submit");
+        submit.setBounds(250,550,120,30);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel=new JButton("Cancel");
+        cancel.setBounds(450,550,120,30);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
+
+        /*ImageIcon i44 = new ImageIcon(ClassLoader.getSystemResource("icon/watermark.png"));
+        Image i54 = i44.getImage().getScaledInstance(1650,1000,Image.SCALE_DEFAULT);
+        ImageIcon i64 = new ImageIcon(i54);
+        JLabel image = new JLabel(i64);
+        image.setBounds(0,0,900,700);
+        add(image);*/
+
+        //setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
+        setEnabled(true);
+        setTitle("Add Student Details");
+    }
+
+
+
+
+
+    public void actionPerformed(ActionEvent ae){
+        int check1=-1;
+        int check2 = 1;
+        int check3=-1;
+        int check4=-1;
+        int check5=-1;
+        int check6=-1;
+
+
+        if (tfname.getInputVerifier().shouldYieldFocus(tfname)) {
+            //JOptionPane.showMessageDialog(null, "Valid name");
+            check1 = 1;
+
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Invalid name. Please enter only alphabetic characters.");
+
+        }
+        if (tffname.getInputVerifier().shouldYieldFocus(tffname)){
+            //  JOptionPane.showMessageDialog(null, "Valid Surname: " + tffname.getText());
+            check2 = 1;
+        }else{
+           JOptionPane.showMessageDialog(null,"Invalid Surname. Please enter only alphabetic characters.");
+        }
+        if (tfphone.getInputVerifier().shouldYieldFocus(tfphone)) {
+            // JOptionPane.showMessageDialog(null, "Valid phone number: " + tfphone.getText());
+            check3 = 1;
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid phone number. Please enter exactly 10 digits.");
+        }
+        if (tfaadhar.getInputVerifier().shouldYieldFocus(tfaadhar)) {
+            check4 = 1;
+            // JOptionPane.showMessageDialog(null, "Valid phone number: " + tfphone.getText());
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid aadhar number. Please enter exactly 12 digits.");
+        }
+        if (tfx.getInputVerifier().shouldYieldFocus(tfx)){
+            check5 = 1;
+
+        }else{
+            JOptionPane.showMessageDialog(null,"Invalid X Marks");
+        }
+        if(tfxii.getInputVerifier().shouldYieldFocus(tfxii)){
+            check6 = 1;
+
+        }else{
+            JOptionPane.showMessageDialog(null,"Invalid XII Marks");
+        }
+        if ((check1 == 1)&&(check2==1)&&(check3==1)&&(check4==1)&&(check5==1)&&(check6==1)){
+            JOptionPane.showMessageDialog(null, "Student Details Inserted Successfully!");
+
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Issue with the data");
+
+        }
+        // CANCEL BUTTON WORKING
+//          if (ae.getSource()==cancel){
+//              System.exit(Integer.parseInt("0"));
+//          }
+        if (ae.getSource()==submit){
+
+            String name=tfname.getText();
+            String fname=tffname.getText();
+            String rollno=labelrollno.getText();
+            String dob=((JTextField) dcdob.getDateEditor().getUiComponent()).getText();
+            String address=tfaddress.getText();
+            String phone=tfphone.getText();
+            String email=tfemail.getText();
+            String x=tfx.getText();
+            String xii=tfxii.getText();
+            String aadhar=tfaadhar.getText();
+            String course=(String)cbcourse.getSelectedItem();
+            String branch=(String)cbbranch.getSelectedItem();
+            try{
+                String query= "insert into student values('"+name+"','"+fname+"','"+rollno+"','"+dob+"','"+address+"','"+phone+"','"+email+"','"+x+"','"+xii+"','"+aadhar+"','"+course+"','"+branch+"')";
+                Conn con =new Conn();
+                con.statement.executeUpdate(query);
+                //  PreparedStatement pstmt = con.prepareStatement(query);
+//                JOptionPane.showMessageDialog(null, "Student Details Inserted Successfully!");
+                setVisible(false);
+            }catch (Exception e){
+                e.printStackTrace();
+                System.out.println(e);
+            }
+        }
+        else {setVisible(false);}
+    }
+
+
+
+    public static void main(String [] args) {
+        new validation();
+    }
+}
+// ----------------------------------------------------------------------------
+STUDENT DETAILS
+
+package institute.management.system;
+
+import net.proteanit.sql.DbUtils;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+
+public class StudentDetails extends JFrame implements ActionListener {
+
+    Choice choice;
+    JTable tabel;
+
+    JButton search, print, update, add, cancel;
+
+    StudentDetails() {
+
+        getContentPane().setBackground(new Color(224, 195, 220));
+
+        JLabel heading = new JLabel("Search by Roll Number");
+        heading.setBounds(20, 20, 150, 20);
+        heading.setForeground(new Color(74, 25, 67));
+        add(heading);
+
+        choice = new Choice();
+        choice.setBounds(180, 20, 150, 20);
+        add(choice);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("select * from student");
+
+            while (resultSet.next()) {
+                choice.add(resultSet.getString("rollno"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        tabel = new JTable();
+        tabel.setEnabled(false);
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery(" select * from student");
+            tabel.setModel(DbUtils.resultSetToTableModel(resultSet));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        JScrollPane js = new JScrollPane(tabel);
+        js.setBounds(0, 100, 900, 600);
+        add(js);
+
+
+        search = new JButton("Search");
+        search.setBounds(20, 70, 80, 20);
+        search.addActionListener(this);
+        add(search);
+
+        print = new JButton("Print");
+        print.setBounds(120, 70, 80, 20);
+        print.addActionListener(this);
+        add(print);
+
+        add = new JButton("Add");
+        add.setBounds(220, 70, 80, 20);
+        add.addActionListener(this);
+        add(add);
+
+        update = new JButton("Update");
+        update.setBounds(320, 70, 80, 20);
+        update.addActionListener(this);
+        add(update);
+
+        cancel = new JButton("Cancel");
+        cancel.setBounds(420, 70, 80, 20);
+        cancel.addActionListener(this);
+        add(cancel);
+
+
+        setLayout(null);
+        setSize(900, 700);
+        setLocation(350, 50);
+        setVisible(true);
+        setResizable(false);
+       // setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == search) {
+            String q = " select * from student where rollno = '" + choice.getSelectedItem() + "'";
+
+            try {
+                Conn c = new Conn();
+                ResultSet resultSet = c.statement.executeQuery(q);
+                tabel.setModel(DbUtils.resultSetToTableModel(resultSet));
+            } catch (Exception E) {
+                E.printStackTrace();
+            }
+
+        } else if (e.getSource()==print){    //PRINT
+            try{
+                tabel.print();
+
+            }catch(Exception E){
+                E.printStackTrace();
+            }
+        } else if (e.getSource()== add) {
+            setVisible(false);
+            new AddStudent();
+
+        } else if (e.getSource()== update) {
+            new UpdateStu();
+
+        }else {
+            setVisible(false);
+        }
+    }
+
+
+    public static void main(String[] args){
+         new StudentDetails();
+
+    }
+}
+
+// --------------------------------------------------------------------------------------
+UPDATE STUDENT
+
+package institute.management.system;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+
+public class UpdateStu extends JFrame implements ActionListener{
+
+    JTextField tfcouresultSete, tfaddress, tfphone, tfemail, tfbranch;
+    JLabel labelrollno;
+    JButton submit, cancel;
+    Choice crollno;
+
+    UpdateStu() {
+
+        setSize(900, 650);
+        setLocation(350, 50);
+
+        setLayout(null);
+
+        JLabel heading = new JLabel("Update Student Details");
+        heading.setBounds(50, 10, 500, 50);
+        heading.setFont(new Font("Tahoma", Font.ITALIC, 35));
+        add(heading);
+
+        JLabel lblrollnumber = new JLabel("Select Roll Number");
+        lblrollnumber.setBounds(50, 100, 200, 20);
+        lblrollnumber.setFont(new Font("serif", Font.PLAIN, 20));
+        add(lblrollnumber);
+
+        crollno = new Choice();
+        crollno.setBounds(250, 100, 200, 20);
+        add(crollno);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("select * from student");
+            while(resultSet.next()) {
+                crollno.add(resultSet.getString("rollno"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        JLabel lblname = new JLabel("Name");
+        lblname.setBounds(50, 150, 100, 30);
+        lblname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblname);
+
+        JLabel labelname = new JLabel();
+        labelname.setBounds(200, 150, 150, 30);
+        labelname.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelname);
+
+        JLabel lblfname = new JLabel(" Surname");
+        lblfname.setBounds(400, 150, 200, 30);
+        lblfname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfname);
+
+        JLabel labelfname = new JLabel();
+        labelfname.setBounds(600, 150, 150, 30);
+        labelfname.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelfname);
+
+        JLabel lblrollno = new JLabel("Roll Number");
+        lblrollno.setBounds(50, 200, 200, 30);
+        lblrollno.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblrollno);
+
+        labelrollno = new JLabel();
+        labelrollno.setBounds(200, 200, 200, 30);
+        labelrollno.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelrollno);
+
+        JLabel lbldob = new JLabel("Date of Birth");
+        lbldob.setBounds(400, 200, 200, 30);
+        lbldob.setFont(new Font("serif", Font.BOLD, 20));
+        add(lbldob);
+
+        JLabel labeldob = new JLabel();
+        labeldob.setBounds(600, 200, 150, 30);
+        labeldob.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labeldob);
+
+        JLabel lbladdress = new JLabel("Address");
+        lbladdress.setBounds(50, 250, 200, 30);
+        lbladdress.setFont(new Font("serif", Font.BOLD, 20));
+        add(lbladdress);
+
+        tfaddress = new JTextField();
+        tfaddress.setBounds(200, 250, 150, 30);
+        add(tfaddress);
+
+        JLabel lblphone = new JLabel("Phone");
+        lblphone.setBounds(400, 250, 200, 30);
+        lblphone.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblphone);
+
+        tfphone = new JTextField();
+        tfphone.setBounds(600, 250, 150, 30);
+        add(tfphone);
+
+        JLabel lblemail = new JLabel("Email Id");
+        lblemail.setBounds(50, 300, 200, 30);
+        lblemail.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblemail);
+
+        tfemail = new JTextField();
+        tfemail.setBounds(200, 300, 150, 30);
+        add(tfemail);
+
+        JLabel lblx = new JLabel("Class X (%)");
+        lblx.setBounds(400, 300, 200, 30);
+        lblx.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblx);
+
+        JLabel labelx = new JLabel();
+        labelx.setBounds(600, 300, 150, 30);
+        labelx.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelx);
+
+        JLabel lblxii = new JLabel("Class XII (%)");
+        lblxii.setBounds(50, 350, 200, 30);
+        lblxii.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblxii);
+
+        JLabel labelxii = new JLabel();
+        labelxii.setBounds(200, 350, 150, 30);
+        labelxii.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelxii);
+
+        JLabel lblaadhar = new JLabel("Aadhar Number");
+        lblaadhar.setBounds(400, 350, 200, 30);
+        lblaadhar.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblaadhar);
+
+        JLabel labelaadhar = new JLabel();
+        labelaadhar.setBounds(600, 350, 150, 30);
+        labelaadhar.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelaadhar);
+
+        JLabel lblcouresultSete = new JLabel("Course");
+        lblcouresultSete.setBounds(50, 400, 200, 30);
+        lblcouresultSete.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblcouresultSete);
+
+        tfcouresultSete = new JTextField();
+        tfcouresultSete.setBounds(200, 400, 150, 30);
+        add(tfcouresultSete);
+
+        JLabel lblbranch = new JLabel("Branch");
+        lblbranch.setBounds(400, 400, 200, 30);
+        lblbranch.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblbranch);
+
+        tfbranch = new JTextField();
+        tfbranch.setBounds(600, 400, 150, 30);
+        add(tfbranch);
+
+        try {
+            Conn c = new Conn();
+            String query = "select * from student where rollno='"+crollno.getSelectedItem()+"'";
+            ResultSet resultSet = c.statement.executeQuery(query);
+            while(resultSet.next()) {
+                labelname.setText(resultSet.getString("name"));
+                labelfname.setText(resultSet.getString("fname"));
+                labeldob.setText(resultSet.getString("dob"));
+                tfaddress.setText(resultSet.getString("address"));
+                tfphone.setText(resultSet.getString("phone"));
+                tfemail.setText(resultSet.getString("email"));
+                labelx.setText(resultSet.getString("class_x"));
+                labelxii.setText(resultSet.getString("class_xii"));
+                labelaadhar.setText(resultSet.getString("aadhar"));
+                labelrollno.setText(resultSet.getString("rollno"));
+                tfcouresultSete.setText(resultSet.getString("course"));
+                tfbranch.setText(resultSet.getString("branch"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        crollno.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent ie) {
+                try {
+                    Conn c = new Conn();
+                    String query = "select * from student where rollno='"+crollno.getSelectedItem()+"'";
+                    ResultSet resultSet = c.statement.executeQuery(query);
+                    while(resultSet.next()) {
+                        labelname.setText(resultSet.getString("name"));
+                        labelfname.setText(resultSet.getString("fname"));
+                        labeldob.setText(resultSet.getString("dob"));
+                        tfaddress.setText(resultSet.getString("address"));
+                        tfphone.setText(resultSet.getString("phone"));
+                        tfemail.setText(resultSet.getString("email"));
+                        labelx.setText(resultSet.getString("class_x"));
+                        labelxii.setText(resultSet.getString("class_xii"));
+                        labelaadhar.setText(resultSet.getString("aadhar"));
+                        labelrollno.setText(resultSet.getString("rollno"));
+                        tfcouresultSete.setText(resultSet.getString("course"));
+                        tfbranch.setText(resultSet.getString("branch"));
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        submit = new JButton("Update");
+        submit.setBounds(250, 500, 120, 30);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel = new JButton("Cancel");
+        cancel.setBounds(450, 500, 120, 30);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == submit) {
+            String rollno = labelrollno.getText();
+            String address = tfaddress.getText();
+            String phone = tfphone.getText();
+            String email = tfemail.getText();
+            String couresultSete = tfcouresultSete.getText();
+            String branch = tfbranch.getText();
+
+            try {
+                String query = "update student set address='"+address+"', phone='"+phone+"', email='"+email+"', course='"+couresultSete+"', branch='"+branch+"' where rollno='"+rollno+"'";
+                Conn con = new Conn();
+                con.statement.executeUpdate(query);
+
+                JOptionPane.showMessageDialog(null, "Student Details Updated Successfully");
+                setVisible(false);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            setVisible(false);
+        }
+    }
+
+    public static void main(String[] args) {
+        new UpdateStu();
+    }
+}
+
+// -----------------------------------------------------------------
+STUDENT LEAVE 
+
+package institute.management.system;
+
+import com.toedter.calendar.JDateChooser;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+
+public class StudentLeave extends JFrame implements ActionListener {
+
+    Choice crollno, ctime;
+    JDateChooser dcdate;
+    JButton submit, cancel;
+
+    StudentLeave() {
+
+        setSize(500, 550);
+        setLocation(550, 100);
+        setLayout(null);
+
+        getContentPane().setBackground(Color.WHITE);
+
+        JLabel heading = new JLabel("Apply Leave (Student)");
+        heading.setBounds(40, 50, 300, 30);
+        heading.setFont(new Font("Tahoma", Font.BOLD, 20));
+        add(heading);
+
+        JLabel lblrollno = new JLabel("Search by Roll Number");
+        lblrollno.setBounds(60, 100, 200, 20);
+        lblrollno.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lblrollno);
+
+        crollno = new Choice();
+        crollno.setBounds(60, 130, 200, 20);
+        add(crollno);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("select * from student");
+            while(resultSet.next()) {
+                crollno.add(resultSet.getString("rollno"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        JLabel lbldate = new JLabel("Date");
+        lbldate.setBounds(60, 180, 200, 20);
+        lbldate.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lbldate);
+
+        dcdate = new JDateChooser();
+        dcdate.setBounds(60, 210, 200, 25);
+        add(dcdate);
+
+        JLabel lbltime = new JLabel("Time Duration");
+        lbltime.setBounds(60, 260, 200, 20);
+        lbltime.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lbltime);
+
+        ctime = new Choice();
+        ctime.setBounds(60, 290, 200, 20);
+        ctime.add("Full Day");
+        ctime.add("Half Day");
+        add(ctime);
+
+        submit = new JButton("Submit");
+        submit.setBounds(60, 350, 100, 25);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel = new JButton("Cancel");
+        cancel.setBounds(200, 350, 100, 25);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == submit) {
+            String rollno = crollno.getSelectedItem();
+            String date = ((JTextField) dcdate.getDateEditor().getUiComponent()).getText();
+            String duration = ctime.getSelectedItem();
+
+            String query = "insert into studentleave values('"+rollno+"', '"+date+"', '"+duration+"')";
+
+            try {
+                Conn c = new Conn();
+                c.statement.executeUpdate(query);
+                JOptionPane.showMessageDialog(null, "Leave Confirmed");
+                setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            setVisible(false);
+        }
+    }
+
+    public static void main(String[] args) {
+        new StudentLeave();
+    }
+}
+
+// ----------------------------------------------------------------------
+STUDENT LEAVE DETAILS 
+
+package institute.management.system;
+
+import net.proteanit.sql.DbUtils;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+
+public class StudentLeaveDetails extends JFrame implements ActionListener {
+
+    Choice crollno;
+    JTable table;
+    JButton search, print, update, add, cancel;
+
+    StudentLeaveDetails() {
+
+        getContentPane().setBackground(Color.WHITE);
+        setLayout(null);
+
+        JLabel heading = new JLabel("Search by Roll Number");
+        heading.setBounds(20, 20, 150, 20);
+        add(heading);
+
+        crollno = new Choice();
+        crollno.setBounds(180, 20, 150, 20);
+        add(crollno);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("select * from student");
+            while(resultSet.next()) {
+                crollno.add(resultSet.getString("rollno"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        table = new JTable();
+        table.setEnabled(false);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("select * from studentleave");
+            table.setModel(DbUtils.resultSetToTableModel(resultSet));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        JScrollPane jsp = new JScrollPane(table);
+        jsp.setBounds(0, 100, 900, 600);
+        add(jsp);
+
+        search = new JButton("Search");
+        search.setBounds(20, 70, 80, 20);
+        search.addActionListener(this);
+        add(search);
+
+        print = new JButton("Print");
+        print.setBounds(120, 70, 80, 20);
+        print.addActionListener(this);
+        add(print);
+
+        cancel = new JButton("Cancel");
+        cancel.setBounds(220, 70, 80, 20);
+        cancel.addActionListener(this);
+        add(cancel);
+
+        setSize(900, 700);
+        setLocation(350, 50);
+        setResizable(false);
+       // setEnabled(false);
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == search) {
+            String query = "select * from studentleave where rollno = '"+crollno.getSelectedItem()+"'";
+            try {
+                Conn c = new Conn();
+                ResultSet rs = c.s.executeQuery(query);
+                table.setModel(DbUtils.resultSetToTableModel(rs));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if (ae.getSource() == print) {
+            try {
+                table.print();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            setVisible(false);
+        }
+    }
+
+    public static void main(String[] args) {
+        new StudentLeaveDetails();
+    }
+}
+
+// ----------------------------------------------------------------------
+
+ADD TEACHER 
+
+package institute.management.system;
+
+import com.toedter.calendar.JDateChooser;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+
+public class AddTeacher extends JFrame implements ActionListener {
+
+    JTextField tfname, tffname,tfaddress,tfphone,tfemail,tfx,tfxii,tfaadhar;
+    JLabel labelempId;
+    JDateChooser dcdob;
+    JComboBox cbcourse,cbbranch;
+    JButton submit, cancel;
+
+    Random ran= new Random();
+    long first4= Math.abs((ran.nextLong() % 9000L)+ 1000L);
+
+    AddTeacher(){
+        setSize(900,700);
+        setLocation (350, 50);
+        getContentPane().setBackground(new Color(224, 195, 220));
+        setLayout(null);
+
+        JLabel heading = new JLabel("New Teacher Details");
+        heading.setForeground(new Color(74,25,67));
+        heading.setBounds(310, 30, 500, 50);
+        heading.setFont(new Font("Arial Black", Font.BOLD, 20));
+        add(heading);
+
+        JLabel lblname = new JLabel("Name");
+        lblname.setForeground(new Color(74,25,67));
+        lblname.setBounds(50, 150, 100, 30);
+        lblname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblname);
+
+        tfname= new JTextField();
+        tfname.setBounds(200, 150, 150, 30);
+        tfname.setForeground(new Color(74,25,67));
+        tfname.setFont(new Font("Times New Roman",Font.PLAIN,16));
+        tfname.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("^[A-Za-z]+$"); // Allows only alphabetic characters
+            }
+        });
+
+        add(tfname);
+
+        JLabel lblfname = new JLabel("Surname");
+        heading.setForeground(new Color(74,25,67));
+        lblfname.setBounds(400, 150, 200, 30);
+        lblfname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfname);
+
+        tffname= new JTextField();
+        tffname.setBounds(600, 150, 150, 30);
+        tffname.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("^[A-Za-z]+$"); // Allows only alphabetic characters
+            }
+        });
+        add(tffname);
+
+        JLabel lblempid = new JLabel("Employee ID");
+        lblempid.setBounds(50, 200, 200, 30);
+        lblempid.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblempid);
+
+        labelempId = new JLabel("101"+first4);
+        labelempId.setBounds(200, 200, 200, 30);
+        labelempId.setFont(new Font("serif", Font.BOLD, 20));
+        add(labelempId);
+
+        JLabel lbldob = new JLabel("Date of Birth");
+        lbldob.setBounds(400, 200, 200, 30);
+        lbldob.setFont(new Font("serif", Font.BOLD, 20));
+        add(lbldob);
+
+        dcdob= new JDateChooser();
+        dcdob.setBounds (600,200,150,30);
+        add(dcdob);
+
+        JLabel lblfaddress = new JLabel("Address");
+        lblfaddress.setBounds(50, 250, 200, 30);
+        lblfaddress.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfaddress);
+
+        tfaddress= new JTextField();
+        tfaddress.setBounds(200, 250, 150, 30);
+        add(tfaddress);
+
+        JLabel lblphone = new JLabel("Phone Number");
+        lblphone.setBounds(400, 250, 200, 30);
+        lblphone.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblphone);
+
+        tfphone= new JTextField();
+        tfphone.setBounds(600, 250, 150, 30);
+        tfphone.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{10}");
+            }
+        });
+        add(tfphone);
+
+        JLabel lblfemail = new JLabel("Email ID");
+        lblfemail.setBounds(50, 300, 200, 30);
+        lblfemail.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfemail);
+
+        tfemail= new JTextField();
+        tfemail.setBounds(200, 300, 150, 30);
+        add(tfemail);
+
+        JLabel lblx = new JLabel("Class X (%)");
+        lblx.setBounds(400, 300, 200, 30);
+        lblx.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblx);
+
+        tfx= new JTextField();
+        tfx.setBounds(600, 300, 150, 30);
+        add(tfx);
+
+        JLabel lblxii = new JLabel("Class XII (%)");
+        lblxii.setBounds(50, 350, 200, 30);
+        lblxii.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblxii);
+
+        tfxii= new JTextField();
+        tfxii.setBounds(200, 350, 150, 30);
+        add(tfxii);
+
+        JLabel lblaadhar = new JLabel("Aadhar Number");
+        lblaadhar.setBounds(400, 350, 200, 30);
+        lblaadhar.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblaadhar);
+
+        tfaadhar= new JTextField();
+        tfaadhar.setBounds(600, 350, 150, 30);
+        tfaadhar.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                String text = textField.getText().trim();
+                return text.matches("\\d{12}");
+            }
+        });
+        add(tfaadhar);
+
+        JLabel lblcourse = new JLabel("Qualification");
+        lblcourse.setBounds(50, 400, 200, 30);
+        lblcourse.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblcourse);
+
+        String course[]= {"BTech", "BBA", "BCA", "Bsc", "Msc", "MBA", "MCA", "Mcom", "MA", "BA"};
+        cbcourse= new JComboBox(course);
+        cbcourse.setBounds(200,400,150,30);
+        cbcourse.setBackground(Color.WHITE);
+        add(cbcourse);
+
+        JLabel lblbranch = new JLabel("Department");
+        lblbranch.setBounds(400, 400, 200, 30);
+        lblbranch.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblbranch);
+
+        String branch[]= {"CMPN", "INFT", "EXTC", "ECS", "ELEC"};
+        cbbranch= new JComboBox(branch);
+        cbbranch.setBounds(600,400,150,30);
+        cbbranch.setBackground(Color.WHITE);
+        add(cbbranch);
+
+        submit=new JButton("Submit");
+        submit.setBounds(250,550,120,30);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel=new JButton("Cancel");
+        cancel.setBounds(450,550,120,30);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
+
+
+        //setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setUndecorated(false);
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae){
+
+        if (tfname.getInputVerifier().shouldYieldFocus(tfname)) {
+            JOptionPane.showMessageDialog(null, "Valid name and Surname");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid name. Please enter only alphabetic characters.");
+        }if (tffname.getInputVerifier().shouldYieldFocus(tffname)){
+
+        }else{
+            JOptionPane.showMessageDialog(null, "Invalid name. Please enter only alphabetic characters.");
+        }if (tfphone.getInputVerifier().shouldYieldFocus(tfphone)) {
+            // JOptionPane.showMessageDialog(null, "Valid phone number: " + tfphone.getText());
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid phone number. Please enter exactly 10 digits.");
+        }if (tfaadhar.getInputVerifier().shouldYieldFocus(tfaadhar)) {
+            // JOptionPane.showMessageDialog(null, "Valid phone number: " + tfphone.getText());
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid aadhar number. Please enter exactly 12 digits.");
+        }
+
+        if (ae.getSource()==submit){
+            String name=tfname.getText();
+            String fname=tffname.getText();
+            String empid=labelempId.getText();
+            String dob=((JTextField) dcdob.getDateEditor().getUiComponent()).getText();
+            String address=tfaddress.getText();
+            String phone=tfphone.getText();
+            String email=tfemail.getText();
+            String x=tfx.getText();
+            String xii=tfxii.getText();
+            String aadhar=tfaadhar.getText();
+            String course=(String)cbcourse.getSelectedItem();
+            String branch=(String)cbbranch.getSelectedItem();
+            try{
+                String empId = null;
+                String qualification = null;
+                String department;
+                department = null;
+                String query= "insert into teacher values('"+name+"','"+fname+"','"+empid+"','"+dob+"','"+address+"','"+phone+"','"+email+"','"+x+"','"+xii+"','"+aadhar+"','"+qualification+"','"+department+"')";
+                Conn con=new Conn();
+                con.statement.executeUpdate(query);
+
+                JOptionPane.showMessageDialog(null, "Teacher Details Inserted Successfully!");
+                setVisible(false);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        else{
+            setVisible(false);
+        }
+    }
+
+    public static void main(String [] args) {
+        new AddTeacher();
+    }
+}
+
+
+// ----------------------------------------------------------------------
+TEACHER DETAILS 
+
+package institute.management.system;
+
+import net.proteanit.sql.DbUtils;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+
+public class TeacherDetails extends JFrame implements ActionListener {
+
+    Choice cEmpId;
+    JTable table;
+    JButton search, print, update, add, cancel;
+
+    TeacherDetails() {
+
+        getContentPane().setBackground(Color.WHITE);
+        setLayout(null);
+
+        JLabel heading = new JLabel("Search by Employee Id");
+        heading.setBounds(20, 20, 150, 20);
+        add(heading);
+
+        cEmpId = new Choice();
+        cEmpId.setBounds(180, 20, 150, 20);
+        add(cEmpId);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("Select * from teacher");
+            while(resultSet.next()) {
+                cEmpId.add(resultSet.getString("empId"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        table = new JTable();
+        table.setEnabled(false);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("select * from teacher");
+            table.setModel(DbUtils.resultSetToTableModel(resultSet));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        JScrollPane jsp = new JScrollPane(table);
+        jsp.setBounds(0, 100, 900, 600);
+        add(jsp);
+
+        search = new JButton("Search");
+        search.setBounds(20, 70, 80, 20);
+        search.addActionListener(this);
+        add(search);
+
+        print = new JButton("Print");
+        print.setBounds(120, 70, 80, 20);
+        print.addActionListener(this);
+        add(print);
+
+        add = new JButton("Add");
+        add.setBounds(220, 70, 80, 20);
+        add.addActionListener(this);
+        add(add);
+
+        update = new JButton("Update");
+        update.setBounds(320, 70, 80, 20);
+        update.addActionListener(this);
+        add(update);
+
+        cancel = new JButton("Cancel");
+        cancel.setBounds(420, 70, 80, 20);
+        cancel.addActionListener(this);
+        add(cancel);
+
+        setSize(900, 700);
+        setLocation(300, 100);
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == search) {
+            String query = "Select * from teacher where empid = '"+cEmpId.getSelectedItem()+"'";
+            try {
+                Conn c = new Conn();
+                ResultSet resultSet = c.statement.executeQuery(query);
+                table.setModel(DbUtils.resultSetToTableModel(resultSet));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if (ae.getSource() == print) {
+            try {
+                table.print();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if (ae.getSource() == add) {
+            setVisible(false);
+            new AddTeacher();
+        } else if (ae.getSource() == update) {
+            setVisible(false);
+            new UpdateTeacher();
+        } else {
+            setVisible(false);
+        }
+    }
+
+    public static void main(String[] args) {
+        new TeacherDetails();
+    }
+}
+
+// ----------------------------------------------------------------------
+UPDATE TEACHER
+
+package institute.management.system;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+
+public class UpdateTeacher extends JFrame implements ActionListener{
+
+    JTextField tfcouresultSete, tfaddress, tfphone, tfemail, tfbranch;
+    JLabel labelEmpId;
+    JButton submit, cancel;
+    Choice cEmpId;
+
+    UpdateTeacher() {
+
+        setSize(900, 650);
+        setLocation(350, 50);
+
+        setLayout(null);
+
+        JLabel heading = new JLabel("Update Teacher Details");
+        heading.setBounds(50, 10, 500, 50);
+        heading.setFont(new Font("Tahoma", Font.ITALIC, 35));
+        add(heading);
+
+        JLabel lblrollnumber = new JLabel("Select Employee Id");
+        lblrollnumber.setBounds(50, 100, 200, 20);
+        lblrollnumber.setFont(new Font("serif", Font.PLAIN, 20));
+        add(lblrollnumber);
+
+        cEmpId = new Choice();
+        cEmpId.setBounds(250, 100, 200, 20);
+        add(cEmpId);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("select * from teacher");
+            while(resultSet.next()) {
+                cEmpId.add(resultSet.getString("empId"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        JLabel lblname = new JLabel("Name");
+        lblname.setBounds(50, 150, 100, 30);
+        lblname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblname);
+
+        JLabel labelname = new JLabel();
+        labelname.setBounds(200, 150, 150, 30);
+        labelname.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelname);
+
+        JLabel lblfname = new JLabel("Father's Name");
+        lblfname.setBounds(400, 150, 200, 30);
+        lblfname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblfname);
+
+        JLabel labelfname = new JLabel();
+        labelfname.setBounds(600, 150, 150, 30);
+        labelfname.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelfname);
+
+        JLabel lblrollno = new JLabel("Employee Id");
+        lblrollno.setBounds(50, 200, 200, 30);
+        lblrollno.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblrollno);
+
+        labelEmpId = new JLabel();
+        labelEmpId.setBounds(200, 200, 200, 30);
+        labelEmpId.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelEmpId);
+
+        JLabel lbldob = new JLabel("Date of Birth");
+        lbldob.setBounds(400, 200, 200, 30);
+        lbldob.setFont(new Font("serif", Font.BOLD, 20));
+        add(lbldob);
+
+        JLabel labeldob = new JLabel();
+        labeldob.setBounds(600, 200, 150, 30);
+        labeldob.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labeldob);
+
+        JLabel lbladdress = new JLabel("Address");
+        lbladdress.setBounds(50, 250, 200, 30);
+        lbladdress.setFont(new Font("serif", Font.BOLD, 20));
+        add(lbladdress);
+
+        tfaddress = new JTextField();
+        tfaddress.setBounds(200, 250, 150, 30);
+        add(tfaddress);
+
+        JLabel lblphone = new JLabel("Phone");
+        lblphone.setBounds(400, 250, 200, 30);
+        lblphone.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblphone);
+
+        tfphone = new JTextField();
+        tfphone.setBounds(600, 250, 150, 30);
+        add(tfphone);
+
+        JLabel lblemail = new JLabel("Email Id");
+        lblemail.setBounds(50, 300, 200, 30);
+        lblemail.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblemail);
+
+        tfemail = new JTextField();
+        tfemail.setBounds(200, 300, 150, 30);
+        add(tfemail);
+
+        JLabel lblx = new JLabel("Class X (%)");
+        lblx.setBounds(400, 300, 200, 30);
+        lblx.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblx);
+
+        JLabel labelx = new JLabel();
+        labelx.setBounds(600, 300, 150, 30);
+        labelx.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelx);
+
+        JLabel lblxii = new JLabel("Class XII (%)");
+        lblxii.setBounds(50, 350, 200, 30);
+        lblxii.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblxii);
+
+        JLabel labelxii = new JLabel();
+        labelxii.setBounds(200, 350, 150, 30);
+        labelxii.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelxii);
+
+        JLabel lblaadhar = new JLabel("Aadhar Number");
+        lblaadhar.setBounds(400, 350, 200, 30);
+        lblaadhar.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblaadhar);
+
+        JLabel labelaadhar = new JLabel();
+        labelaadhar.setBounds(600, 350, 150, 30);
+        labelaadhar.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelaadhar);
+
+        JLabel lblcouresultSete = new JLabel("Education");
+        lblcouresultSete.setBounds(50, 400, 200, 30);
+        lblcouresultSete.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblcouresultSete);
+
+        tfcouresultSete = new JTextField();
+        tfcouresultSete.setBounds(200, 400, 150, 30);
+        add(tfcouresultSete);
+
+        JLabel lblbranch = new JLabel("Department");
+        lblbranch.setBounds(400, 400, 200, 30);
+        lblbranch.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblbranch);
+
+        tfbranch = new JTextField();
+        tfbranch.setBounds(600, 400, 150, 30);
+        add(tfbranch);
+
+        try {
+            Conn c = new Conn();
+            String query = "select * from teacher where empId='"+cEmpId.getSelectedItem()+"'";
+            ResultSet resultSet = c.statement.executeQuery(query);
+            while(resultSet.next()) {
+                labelname.setText(resultSet.getString("name"));
+                labelfname.setText(resultSet.getString("fname"));
+                labeldob.setText(resultSet.getString("dob"));
+                tfaddress.setText(resultSet.getString("address"));
+                tfphone.setText(resultSet.getString("phone"));
+                tfemail.setText(resultSet.getString("email"));
+                labelx.setText(resultSet.getString("class_x"));
+                labelxii.setText(resultSet.getString("class_xii"));
+                labelaadhar.setText(resultSet.getString("aadhar"));
+                labelEmpId.setText(resultSet.getString("empId"));
+                tfcouresultSete.setText(resultSet.getString("education"));
+                tfbranch.setText(resultSet.getString("department"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        cEmpId.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent ie) {
+                try {
+                    Conn c = new Conn();
+                    String query = "select * from teacher where empId='"+cEmpId.getSelectedItem()+"'";
+                    ResultSet resultSet = c.statement.executeQuery(query);
+                    while(resultSet.next()) {
+                        labelname.setText(resultSet.getString("name"));
+                        labelfname.setText(resultSet.getString("fname"));
+                        labeldob.setText(resultSet.getString("dob"));
+                        tfaddress.setText(resultSet.getString("address"));
+                        tfphone.setText(resultSet.getString("phone"));
+                        tfemail.setText(resultSet.getString("email"));
+                        labelx.setText(resultSet.getString("class_x"));
+                        labelxii.setText(resultSet.getString("class_xii"));
+                        labelaadhar.setText(resultSet.getString("aadhar"));
+                        labelEmpId.setText(resultSet.getString("empId"));
+                        tfcouresultSete.setText(resultSet.getString("education"));
+                        tfbranch.setText(resultSet.getString("department"));
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        submit = new JButton("Update");
+        submit.setBounds(250, 500, 120, 30);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel = new JButton("Cancel");
+        cancel.setBounds(450, 500, 120, 30);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == submit) {
+            String empId = labelEmpId.getText();
+            String address = tfaddress.getText();
+            String phone = tfphone.getText();
+            String email = tfemail.getText();
+            String couresultSete = tfcouresultSete.getText();
+            String branch = tfbranch.getText();
+
+            try {
+                String query = "update teacher set address='"+address+"', phone='"+phone+"', email='"+email+"', education='"+couresultSete+"', department='"+branch+"' where empId='"+empId+"'";
+                Conn con = new Conn();
+                con.s.executeUpdate(query);
+
+                JOptionPane.showMessageDialog(null, "Student Details Updated Successfully");
+                setVisible(false);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            setVisible(false);
+        }
+    }
+
+    public static void main(String[] args) {
+        new UpdateTeacher();
+    }
+}
+
+// ----------------------------------------------------------------------
+
+TEACHER LEAVE
+
+
+// Teacher leave portal
+
+package institute.management.system;
+
+import com.toedter.calendar.JDateChooser;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+
+public class TeacherLeave extends JFrame implements ActionListener {
+
+    Choice cEmpId, ctime;
+       JDateChooser dcdate;
+    JButton submit, cancel;
+
+    TeacherLeave(){
+        setSize(500,550);
+        setLocation(550,100);
+        setLayout(null);
+
+        getContentPane().setBackground(Color.WHITE);
+
+        JLabel heading = new JLabel("Apply Leave (Teacher)");
+        heading.setBounds(40, 50, 300, 30);
+        heading.setFont(new Font("Tahoma", Font.BOLD, 20));
+        add(heading);
+
+        JLabel lblrollno = new JLabel("Search by Employee Id");
+        lblrollno.setBounds(60, 100, 200, 20);
+        lblrollno.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lblrollno);
+
+        cEmpId = new Choice();
+        cEmpId.setBounds(60,130,220,20);
+        add(cEmpId);
+
+        try{
+            Conn C = new Conn();
+            ResultSet resultSet = C.statement.executeQuery("select * from teacher");
+            while (resultSet.next()){
+                cEmpId.add(resultSet.getString("empId"));
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        JLabel lbldate = new JLabel("Date");
+        lbldate.setBounds(60, 180, 200, 20);
+        lbldate.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lbldate);
+
+        dcdate = new JDateChooser();
+        dcdate.setBounds(60,210,200,30);
+        add(dcdate);
+
+        JLabel lbltime = new JLabel("Time Duration");
+        lbltime.setBounds(60, 260, 200, 20);
+        lbltime.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lbltime);
+
+        ctime = new Choice();
+        ctime.setBounds(60,290,200,20);
+        ctime.add("Full Day");
+        ctime.add("Half Day");
+        add(ctime);
+
+        submit = new JButton("Submit");
+        submit.setBounds(60, 350, 100, 25);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel = new JButton("Cancel");
+        cancel.setBounds(200, 350, 100, 25);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
+        setVisible(true);
+       // setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource()==submit){
+            String rollno = cEmpId.getSelectedItem();
+            String date = ((JTextField) dcdate.getDateEditor().getUiComponent()).getText();
+            String duration = ctime.getSelectedItem();
+
+            String query = "Insert into teacherleave values('"+rollno+"', '"+date+"', '"+duration+"')";
+
+            try{
+                Conn c=new Conn();
+                c.statement.executeUpdate(query);
+                JOptionPane.showMessageDialog(null, "Leave Confirmed");
+                setVisible(false);
+            }catch(Exception e){
+                e.printStackTrace();
+
+            }
+        }else{
+            setVisible(false);
+        }
+    }
+    public static void main (String[]args){
+        new TeacherLeave();
+    }
+}
+
+// ----------------------------------------------------------------------
+
+
+FEE STRUCTURE 
+
+package institute.management.system;
+
+import net.proteanit.sql.DbUtils;
+
+import javax.swing.*;
+import java.awt.*;
+import java.sql.ResultSet;
+
+public class FeeStructure extends JFrame {
+
+    FeeStructure(){
+        setSize(1000,700);
+        setLocation(350,50);
+        setLayout(null);
+
+        getContentPane().setBackground(new Color(224, 195, 220));
+
+        JLabel heading = new JLabel("Fee Structure");
+        heading.setBounds(50,10,400,30);
+        heading.setForeground(new Color(74,25,67));
+        heading.setFont(new Font("ARIAL BLACK", Font.BOLD,25));
+        add(heading);
+
+
+
+        JTable table = new JTable();
+        table.setEnabled(false);
+
+        try{
+            Conn c = new Conn();
+            ResultSet resultSet =c.statement.executeQuery("Select * from fee");
+            table.setModel(DbUtils.resultSetToTableModel(resultSet));
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+
+
+
+        JScrollPane jsp = new JScrollPane(table);
+        jsp.setBounds(0,60,1000,700);
+        add(jsp);
+
+        setVisible(true);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static void main(String [] args){
+        new FeeStructure();
+
+    }
+}
+// ----------------------------------------------------------------------
+
+
+
+FEE FORM
+
+
+package institute.management.system;
+
+import javax.swing.*;
+import java.awt.*;
+import java.sql.*;
+import java.awt.event.*;
+
+public class FeeForm extends JFrame implements ActionListener {
+
+    Choice crollno;
+    JComboBox cbcourse, cbbranch, cbsemester;
+    JLabel labeltotal;
+    JButton update, pay, back;
+    FeeForm() {
+        setSize(900, 500);
+        setLocation(300, 100);
+        setLayout(null);
+
+        getContentPane().setBackground(Color.WHITE);
+
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/fee.png"));
+        Image i2 = i1.getImage().getScaledInstance(500, 300, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel image = new JLabel(i3);
+        image.setBounds(400, 50, 500, 300);
+        add(image);
+
+        JLabel lblrollnumber = new JLabel("Select Roll No");
+        lblrollnumber.setBounds(40, 60, 150, 20);
+        lblrollnumber.setFont(new Font("Tahoma", Font.BOLD, 16));
+        add(lblrollnumber);
+
+        crollno = new Choice();
+        crollno.setBounds(200, 60, 150, 20);
+        add(crollno);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("select * from student");
+            while(resultSet.next()) {
+                crollno.add(resultSet.getString("rollno"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        JLabel lblname = new JLabel("Name");
+        lblname.setBounds(40, 100, 150, 20);
+        lblname.setFont(new Font("Tahoma", Font.BOLD, 16));
+        add(lblname);
+
+        JLabel labelname = new JLabel();
+        labelname.setBounds(200, 100, 150, 20);
+        labelname.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        add(labelname);
+
+        JLabel lblfname = new JLabel("Surname");
+        lblfname.setBounds(40, 140, 150, 20);
+        lblfname.setFont(new Font("Tahoma", Font.BOLD, 16));
+        add(lblfname);
+
+        JLabel labelfname = new JLabel();
+        labelfname.setBounds(200, 140, 150, 20);
+        labelfname.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        add(labelfname);
+
+        try {
+            Conn c = new Conn();
+            String query = "select * from student where rollno='"+crollno.getSelectedItem()+"'";
+            ResultSet rs = c.s.executeQuery(query);
+            while(rs.next()) {
+                labelname.setText(rs.getString("name"));
+                labelfname.setText(rs.getString("fname"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        crollno.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent ie) {
+                try {
+                    Conn c = new Conn();
+                    String query = "select * from student where rollno='"+crollno.getSelectedItem()+"'";
+                    ResultSet resultSet = c.statement.executeQuery(query);
+                    while(resultSet.next()) {
+                        labelname.setText(resultSet.getString("name"));
+                        labelfname.setText(resultSet.getString("fname"));
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        JLabel lblcourse = new JLabel("Course");
+        lblcourse.setBounds(40, 180, 150, 20);
+        lblcourse.setFont(new Font("Tahoma", Font.BOLD, 16));
+        add(lblcourse);
+
+        String course[] = {"BTech", "BBA", "BCA", "Bsc", "Msc", "MBA", "MCA", "MCom", "MA", "BA"};
+        cbcourse = new JComboBox(course);
+        cbcourse.setBounds(200, 180, 150, 20);
+        cbcourse.setBackground(Color.WHITE);
+        add(cbcourse);
+
+        JLabel lblbranch = new JLabel("Branch");
+        lblbranch.setBounds(40, 220, 150, 20);
+        lblbranch.setFont(new Font("Tahoma", Font.BOLD, 16));
+        add(lblbranch);
+
+        String branch[] = {"Computer Science", "Electronics", "Mechanical", "Civil", "IT"};
+        cbbranch = new JComboBox(branch);
+        cbbranch.setBounds(200, 220, 150, 20);
+        cbbranch.setBackground(Color.WHITE);
+        add(cbbranch);
+
+        JLabel lblsemester = new JLabel("Semester");
+        lblsemester.setBounds(40, 260, 150, 20);
+        lblsemester.setFont(new Font("Tahoma", Font.BOLD, 16));
+        add(lblsemester);
+
+        String semester[] = {"Semester1", "Semester2", "Semester3", "Semester4", "Semester5", "Semester6", "Semester7", "Semester8" };
+        cbsemester = new JComboBox(semester);
+        cbsemester.setBounds(200, 260, 150, 20);
+        cbsemester.setBackground(Color.WHITE);
+        add(cbsemester);
+
+        JLabel lbltotal = new JLabel("Total Payable");
+        lbltotal.setBounds(40, 300, 150, 20);
+        lbltotal.setFont(new Font("Tahoma", Font.BOLD, 16));
+        add(lbltotal);
+
+        labeltotal = new JLabel();
+        labeltotal.setBounds(200, 300, 150, 20);
+        labeltotal.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        add(labeltotal);
+
+        update = new JButton("Update");
+        update.setBounds(30, 380, 100, 25);
+        update.setBackground(Color.BLACK);
+        update.setForeground(Color.WHITE);
+        update.addActionListener(this);
+        add(update);
+
+        pay = new JButton("Pay Fee");
+        pay.setBounds(150, 380, 100, 25);
+        pay.setBackground(Color.BLACK);
+        pay.setForeground(Color.WHITE);
+        pay.addActionListener(this);
+        pay.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(pay);
+
+        back = new JButton("Back");
+        back.setBounds(270, 380, 100, 25);
+        back.setBackground(Color.BLACK);
+        back.setForeground(Color.WHITE);
+        back.addActionListener(this);
+        back.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(back);
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == update) {
+            String course = (String) cbcourse.getSelectedItem();
+            String semester = (String) cbsemester.getSelectedItem();
+            try {
+                Conn c = new Conn();
+                ResultSet resultSet = c.statement.executeQuery("select * from fee where course = '"+course+"'");
+                while(resultSet.next()) {
+                    labeltotal.setText(resultSet.getString(semester));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if (ae.getSource() == pay) {
+            String rollno = crollno.getSelectedItem();
+            String course = (String) cbcourse.getSelectedItem();
+            String semester = (String) cbsemester.getSelectedItem();
+            String branch = (String) cbbranch.getSelectedItem();
+            String total = labeltotal.getText();
+
+            try {
+                Conn c = new Conn();
+
+                String query = "insert into collegefee values('"+rollno+"', '"+course+"', '"+branch+"', '"+semester+"', '"+total+"')";
+                c.statement.executeUpdate(query);
+
+                JOptionPane.showMessageDialog(null, "College fee submitted successfully");
+                setVisible(false);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            setVisible(false);
+        }
+    }
+
+    public static void main(String[] args) {
+        new FeeForm();
+    }
+}
+
+// ----------------------------------------------------------------------
+
+
+
+ENTER MARKS
+
+
+package institute.management.system;
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+
+public class EnterMarks extends JFrame implements ActionListener{
+
+    Choice crollno;
+    JComboBox cbsemester;
+    JTextField tfsub1,tfsub2,tfsub3,tfsub4,tfsub5,tfmarks1,tfmarks2,tfmarks3,tfmarks4,tfmarks5;
+    JButton cancel,submit;
+
+    EnterMarks(){
+
+        setSize(1000,500);
+        setLocation(350,150);
+        setLayout(null);
+
+        getContentPane().setBackground(new Color(224, 195, 220));
+
+        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icon/exam.png"));
+        Image i2 = i1.getImage().getScaledInstance(400,300,Image.SCALE_DEFAULT);
+        ImageIcon i3= new ImageIcon(i2);
+        JLabel image= new JLabel(i3);
+        image.setBounds(500,40,400,300);
+        add(image);
+
+        JLabel heading= new JLabel ("Enter Marks of Student");
+        heading.setBounds(50,0,500,50);
+        heading.setFont(new Font("Tahoma", Font.BOLD,20));
+        heading.setForeground(new Color(74, 25, 67));
+        add(heading);
+
+        JLabel lblrollnumber= new JLabel ("Select Roll Number");
+        lblrollnumber.setForeground(new Color(74, 25, 67));
+        lblrollnumber.setBounds(50,70,150,20);
+        add(lblrollnumber);
+
+        crollno=new Choice();
+        crollno.setBounds(200,70,150,20);
+        add(crollno);
+
+        try{
+            Conn c= new Conn();
+            ResultSet rs= c.statement.executeQuery("select * from student");
+            while(rs.next()){
+                crollno.add(rs.getString("rollno"));
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        JLabel lblsemester= new JLabel ("Select Semester");
+        lblsemester.setForeground(new Color(74, 25, 67));
+        lblsemester.setBounds(50,110,150,20);
+      //  lblsemester.setForeground(new Color(224, 195, 220));
+        add(lblsemester);
+
+        String semester[]={"1st Semester", "2nd Semester", "3rd Semester","4th Semester","5th Semester","6th Semester","7th Semester","8th Semester"};
+        cbsemester=new JComboBox(semester);
+        cbsemester.setBounds(200,110,150,20);
+        cbsemester.setBackground(Color.WHITE);
+        add(cbsemester);
+
+        JLabel lblentersubject= new JLabel ("Enter Subject");
+        lblentersubject.setForeground(new Color(74, 25, 67));
+        lblentersubject.setBounds(100,150,200,40);
+        //lblentersubject.setForeground(new Color(224, 195, 220));
+        add(lblentersubject);
+
+        JLabel lblentermarks= new JLabel ("Enter Marks");
+        lblentermarks.setBounds(320,150,200,40);
+        lblentermarks.setForeground(new Color(74, 25, 67));
+        //lblentermarks.setForeground(new Color(224, 195, 220));
+        add(lblentermarks);
+
+        tfsub1= new JTextField();
+        tfsub1.setBounds(50,200,200,20);
+        tfsub1.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfsub1);
+
+        tfsub2= new JTextField();
+        tfsub2.setBounds(50,230,200,20);
+        tfsub2.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfsub2);
+
+        tfsub3= new JTextField();
+        tfsub3.setBounds(50,260,200,20);
+        tfsub3.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfsub3);
+
+        tfsub4= new JTextField();
+        tfsub4.setBounds(50,290,200,20);
+        tfsub4.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfsub4);
+
+        tfsub5= new JTextField();
+        tfsub5.setBounds(50,320,200,20);
+        tfsub5.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfsub5);
+
+        tfmarks1= new JTextField();
+        tfmarks1.setBounds(250,200,200,20);
+        tfmarks1.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfmarks1);
+
+        tfmarks2= new JTextField();
+        tfmarks2.setBounds(250,230,200,20);
+        tfmarks2.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfmarks2);
+
+        tfmarks3= new JTextField();
+        tfmarks3.setBounds(250,260,200,20);
+        tfmarks3.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfmarks3);
+
+        tfmarks4= new JTextField();
+        tfmarks4.setBounds(250,290,200,20);
+        tfmarks4.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfmarks4);
+
+        tfmarks5= new JTextField();
+        tfmarks5.setBounds(250,320,200,20);
+        tfmarks5.setFont(new Font("TIMES NEW ROMAN",Font.PLAIN,13));
+        add(tfmarks5);
+
+        submit=new JButton("Submit");
+        submit.setBounds(70,360,150,25);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel=new JButton("Cancel");
+        cancel.setBounds(280,360,150,25);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
+      //  setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource()==submit){
+            try{
+                Conn c= new Conn();
+
+                String query1="insert into subject values('"+crollno.getSelectedItem()+"','"+cbsemester.getSelectedItem()+"',  '"+tfsub1.getText()+"','"+tfsub2.getText()+"','"+tfsub3.getText()+"','"+tfsub4.getText()+"','"+tfsub5.getText()+"',)";
+                String query2="insert into marks values('"+crollno.getSelectedItem()+"','"+cbsemester.getSelectedItem()+"','"+tfmarks1.getText()+"','"+tfmarks2.getText()+"','"+tfmarks3.getText()+"','"+tfmarks4.getText()+"','"+tfmarks5.getText()+"',)";
+
+                c.statement.executeUpdate(query1);
+                c.statement.executeUpdate(query2);
+
+                JOptionPane.showMessageDialog(null,"Marks Inserted Successfully");
+                setVisible(false);
+
+            } catch(Exception E){
+                E.printStackTrace();
+            }
+        }else{
+            setVisible(false);
+        }
+    }
+
+    public static void main(String[] args){
+        new EnterMarks();
+    }
+}
+
+// ----------------------------------------------------------------------
+
+
+EXAMINATIONDETAILS
+
+package institute.management.system;
+
+import net.proteanit.sql.DbUtils;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.sql.ResultSet;
+
+public class ExaminationDetails extends JFrame implements ActionListener {
+
+    JTextField search;
+    JButton submit, cancel;
+    JTable table;
+
+    ExaminationDetails() {
+        setSize(1000, 475);
+        setLocation(300, 100);
+        setTitle("Examination Details");
+        setLayout(null);
+
+        getContentPane().setBackground(Color.WHITE);
+
+        JLabel heading = new JLabel("Check Result");
+        heading.setBounds(80, 15, 400, 50);
+        heading.setFont(new Font("Tahoma", Font.BOLD, 24));
+        add(heading);
+
+        search = new JTextField();
+        search.setBounds(80, 90, 200, 30);
+        search.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(search);
+
+        submit = new JButton("Result");
+        submit.setBounds(300, 90, 120, 30);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel = new JButton("Back");
+        cancel.setBounds(440, 90, 120, 30);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
+        table = new JTable();
+        table.setFont(new Font("Tahoma", Font.PLAIN, 16));
+
+        JScrollPane jsp = new JScrollPane(table);
+        jsp.setBounds(0, 130, 1000, 310);
+        add(jsp);
+
+        try {
+            Conn c = new Conn();
+            ResultSet resultSet = c.statement.executeQuery("select * from student");
+            table.setModel(DbUtils.resultSetToTableModel(resultSet));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        table.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent me) {
+                int row = table.getSelectedRow();
+                search.setText(table.getModel().getValueAt(row, 2).toString());
+            }
+        });
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == submit) {
+            setVisible(false);
+            new Marks(search.getText()); //parameterized constructor
+        } else {
+            setVisible(false);
+        }
+    }
+
+    public static void main(String[] args) {
+        new ExaminationDetails();
+    }
+}
+
+
+// ----------------------------------------------------------------------
+
+
+MARKS CLASS EXTERNAL 
+
+package institute.management.system;
+
+public class Marks {
+
+    String rollno;
+
+    Marks(String rollno){
+        this.rollno = rollno;
+    }
+    public static void main(String[] args){
+        new Marks("");
+    }
+}
+// ----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
